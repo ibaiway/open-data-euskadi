@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: var(--font-mulish);
+  }
+  h1 {
+    font-family: var(--font-ibm-plex-sans);
+    font-weight: 600;
+    font-size: 40px;
+  }
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+@layer components {
+  .content-layout {
+    @apply py-2 px-4;
+  }
+
+  .content-layout > * {
+    @apply mx-auto;
+    max-width: 664px;
+  }
+
+  .content-layout > .container-expanded {
+    max-width: 882px;
+    @apply -mx-2 md:mx-auto;
+  }
+
+  .logo {
+    @apply font-bold dark:text-slate-50 text-xl md:text-3xl inline-block leading-6 md:leading-8;
+  }
+
+  .logo-text-gradient {
+    @apply from-indigo-500 via-purple-500 to-pink-500 bg-gradient-to-r bg-clip-text text-transparent block;
+  }
+
+  .button {
+    @apply font-semibold text-white bg-blue-500 border-2 border-blue-500 rounded-md px-4 py-2;
+  }
+
+  .listbox {
+    position: absolute;
+    top: calc(100% + 2px);
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    @apply bg-slate-900 text-slate-50 shadow-xl rounded-md;
+  }
+
+  .listbox-list {
+    overflow: auto;
+    max-height: min(560px, 60vh);
+  }
+
+  .listbox-item {
+    @apply text-slate-50 py-3 px-4 block cursor-pointer transition-colors duration-200 text-sm;
+  }
+
+  .listbox-item:hover {
+    @apply bg-slate-700;
+  }
+
+  .listbox-item[aria-selected="true"] {
+    outline: none;
+    @apply bg-blue-500 text-white;
+  }
+
+  .autocomplete {
+    position: relative;
+  }
+
+  .autocomplete-notmatch {
+    @apply text-slate-50 rounded-md py-3 px-4 block text-sm text-center;
+  }
+}

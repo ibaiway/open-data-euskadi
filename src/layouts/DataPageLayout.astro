@@ -1,0 +1,52 @@
+---
+import Footer from '../components/layout/Footer.astro';
+import GridMenu from '../components/layout/GridMenu';
+import Header from '../components/layout/Header.astro';
+import Navbar from '../components/layout/Navbar';
+import Layout from '../layouts/Layout.astro';
+const { title } = Astro.props;
+
+---
+
+<Layout title={title}>
+    <div class='md:grid md:grid-cols-[280px_1fr] gap-6 min-h-[100vh]'>
+        <div class="md:hidden">
+          <div class="border-b border-b-slate-800">
+            <Header />
+          </div>
+
+        </div>
+
+        <div class="hidden md:block pr-6 border-r border-r-slate-800">
+            <Navbar />
+        </div>
+
+        <div class='grow md:py-4 flex flex-col'>
+          <main class='content-layout grow'>
+            <slot />
+          </main>
+            <Footer />
+        </div>
+    </div>
+</Layout>
+
+<style is:global>
+    p {
+        @apply text-slate-400 mb-4
+    }
+    h1 {
+        @apply text-3xl text-slate-100 font-bold mb-3 mt-3 md:mt-8;
+    }
+    h2 {
+        @apply text-xl text-slate-100 font-bold mb-3 mt-3 md:mt-8;
+    }
+    h3 {
+        @apply text-lg text-slate-100 font-bold mb-3 mt-3 md:mt-8
+    }
+    h4 {
+        @apply text-lg text-slate-100 font-bold mb-3 mt-3 md:mt-8
+    }
+    a {
+        @apply text-blue-500 hover:underline;
+    }
+</style>
