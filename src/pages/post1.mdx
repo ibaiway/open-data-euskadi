@@ -5,6 +5,8 @@ category: "empleo"
 
 import DataPageLayout from "../layouts/DataPageLayout.astro"
 import TestChart from "../components/charts/TestChart.jsx"
+import BirthsPerYear from "../components/charts/BirthsPerYear.jsx"
+import { DonutChartHero } from "../components/charts/DonutChart"
 
 export function fancyJsHelper() {
   return "Try doing that with YAML!"
@@ -28,6 +30,10 @@ La emigración exterior de residentes en La Rioja desglosada por grupo de edad.
 La emigración exterior de residentes en La Rioja desglosada por destino.
 
 <TestChart />
+<BirthsPerYear
+  client:load
+  originUrl="https://web.larioja.org/dato-abierto/datoabierto?n=opd-53"
+/>
 
 [title link for example](https://www.example.com)
 
