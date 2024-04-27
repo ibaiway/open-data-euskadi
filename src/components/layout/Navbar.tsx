@@ -1,83 +1,13 @@
+import { menuItems } from "../../config"
 import MenuItem from "../ui/MenuItem"
 
-const menuItems = [
-  {
-    title: "Empleo",
-    items: [
-      {
-        title: "Desempleo",
-        url: "/desempleo",
-      },
-      {
-        title: "Accidentes laborales",
-        url: "/accidentes-laborales",
-      },
-    ],
-  },
-  {
-    title: "Energía",
-    items: [
-      {
-        title: "Consumo de combustible",
-        url: "/consumo-de-combustible",
-      },
-      {
-        title: "Consumo eléctrico",
-        url: "/consumo-electrico",
-      },
-    ],
-  },
-  {
-    title: "Demografía",
-    items: [
-      {
-        title: "Población",
-        url: "/poblacion",
-      },
-      {
-        title: "Emigración",
-        url: "/emigracion",
-      },
-      {
-        title: "Inmigración",
-        url: "/inmigracion",
-      },
-      {
-        title: "Evolución edad en matrimonio",
-        url: "/evolucion-edad-matrimonio",
-      },
-      {
-        title: "Natalidad",
-        url: "natalidad",
-      },
-    ],
-  },
-  {
-    title: "Sector público",
-    items: [
-      {
-        title: "Contratos públicos",
-        url: "/contratos-publicos",
-      },
-    ],
-  },
-  {
-    title: "Economía",
-    items: [
-      {
-        title: "Evolución del IPC",
-        url: "/evolucion-del-ipc",
-      },
-      {
-        title: "Gastos e ingresos",
-        url: "/gastos-ingresos",
-      },
-    ],
-  },
-]
-
-export default function Navbar() {
-  const currentPage = "page"
+interface NavbarItemProps {
+  pathname?: string
+}
+export default function Navbar(props: NavbarItemProps) {
+  const currentPath = props.pathname
+  const currentPage = currentPath ? currentPath.replace("/", "") : ""
+  console.log(currentPage)
 
   const menuItemsWithActive = menuItems.map((item) => {
     const segment = "page"
@@ -87,7 +17,7 @@ export default function Navbar() {
 
       return {
         ...child,
-        actived: currentSegment === segment,
+        actived: currentSegment === currentPage,
       }
     })
 

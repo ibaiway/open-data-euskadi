@@ -4,7 +4,9 @@ import GridMenu from '../components/layout/GridMenu';
 import Header from '../components/layout/Header.astro';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../layouts/Layout.astro';
+import Prose from './Prose.astro';
 const { title } = Astro.props;
+const { pathname } = Astro.url
 
 ---
 
@@ -18,12 +20,14 @@ const { title } = Astro.props;
         </div>
 
         <div class="hidden md:block pr-6 border-r border-r-slate-800">
-            <Navbar />
+            <Navbar pathname={pathname}/>
         </div>
 
         <div class='grow md:py-4 flex flex-col'>
           <main class='content-layout grow'>
-            <slot />
+            <Prose>
+                <slot />
+                </Prose>
           </main>
             <Footer />
         </div>
@@ -31,22 +35,6 @@ const { title } = Astro.props;
 </Layout>
 
 <style is:global>
-    p {
-        @apply text-slate-400 mb-4
-    }
-    h1 {
-        @apply text-3xl text-slate-100 font-bold mb-3 mt-3 md:mt-8;
-    }
-    h2 {
-        @apply text-xl text-slate-100 font-bold mb-3 mt-3 md:mt-8;
-    }
-    h3 {
-        @apply text-lg text-slate-100 font-bold mb-3 mt-3 md:mt-8
-    }
-    h4 {
-        @apply text-lg text-slate-100 font-bold mb-3 mt-3 md:mt-8
-    }
-    a {
-        @apply text-blue-500 hover:underline;
-    }
+
+
 </style>
