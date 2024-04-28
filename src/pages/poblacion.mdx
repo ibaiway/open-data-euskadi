@@ -1,0 +1,18 @@
+---
+title: "Población"
+category: "Demografía"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import TestChart from "../components/charts/TestChart.jsx"
+import BirthsPerYear from "../components/charts/BirthsPerYear.astro"
+import PopulationTotal from "../components/charts/PopulationTotal.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # Población
+
+La evolución demográfica de Euskadi, visualizado por provincias.
+
+<PopulationTotal originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-demografia/" />
+
+</DataPageLayout>

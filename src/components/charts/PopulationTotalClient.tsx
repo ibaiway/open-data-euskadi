@@ -1,24 +1,25 @@
-import { type BarChartProps, BarChart } from "@tremor/react"
+import { type BarChartProps, AreaChart } from "@tremor/react"
 import { formatLargeNumber } from "../../lib/shared/formatters"
 
-interface BirthsPerYearClientProps {
+interface PopulationTotalClientProps {
   data: BarChartProps["data"]
   index: BarChartProps["index"]
   categories: BarChartProps["categories"]
 }
 
-export default function BirthsPerYearClient(props: BirthsPerYearClientProps) {
+export default function PopulationTotalClient(
+  props: PopulationTotalClientProps
+) {
   const { index, data, categories } = props
 
   return (
-    <BarChart
-      className="mt-6"
+    <AreaChart
       data={data}
       index={index}
       categories={categories}
       valueFormatter={formatLargeNumber}
       yAxisWidth={40}
-      showLegend={false}
+      connectNulls
     />
   )
 }

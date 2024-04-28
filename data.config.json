@@ -1,0 +1,7 @@
+{
+  "population": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/162",
+    "fileName": "poblacion_total.json",
+    "source": "udalmap"
+  }
+}
