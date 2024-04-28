@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import type { ReactNode } from "preact/compat"
+import type { ReactNode } from "react"
 
 interface MenuItemProps {
   className?: string

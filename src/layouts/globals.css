@@ -39,7 +39,7 @@
   }
 
   .logo-text-gradient {
-    @apply from-indigo-500 via-purple-500 to-pink-500 bg-gradient-to-r bg-clip-text text-transparent block;
+    @apply font-["urkiola"] from-green-500 from-30% via-slate-50 via-50% to-red-500 to-70% bg-gradient-to-r bg-clip-text text-transparent block;
   }
 
   .button {
