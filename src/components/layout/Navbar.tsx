@@ -31,7 +31,7 @@ export default function Navbar(props: NavbarItemProps) {
     <nav className="py-10 px-2 md:px-6">
       <div className="mb-12">
         <a href="/" className="logo">
-          Open Data <span className="logo-text-gradient">Euskadi</span>
+          Open Data <span className="logo-text-gradient">EUSKADI</span>
         </a>
       </div>
 
