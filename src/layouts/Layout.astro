@@ -1,5 +1,7 @@
 ---
+import clsx from 'clsx';
 import './globals.css'
+import { AstroFont } from "astro-font";
 
 interface Props {
 	title: string;
@@ -18,8 +20,34 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<AstroFont
+      config={[
+        {
+          src: [],
+          name: "Mulish",
+          // Google Fonts URL
+          googleFontsURL: 'https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap',
+          preload: true,
+          display: "swap",
+          selector: ".font-mulish",
+          fallback: "sans-serif",
+        },
+		{
+		  src: [],
+		  name: "ibm-plex-sans",
+		  // Google Fonts URL
+		  googleFontsURL: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap',
+		  preload: true,
+		  display: "swap",
+		  selector: ".ibm-plex-sans",
+		  fallback: "sans-serif",
+		},
+		
+      ]}
+	  
+    />
 	</head>
-	<body class='bg-slate-950'>
+	<body class={clsx("font-mulish","font-ibm-plex-sans","bg-white dark:bg-slate-950")}>
 		<slot />
 	</body>
 </html>
