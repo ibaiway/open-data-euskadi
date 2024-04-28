@@ -3,6 +3,7 @@
 import colors from "tailwindcss/colors"
 
 export default {
+  darkMode: "class",
   content: [
     "./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
     "./node_modules/@tremor/**/*.{js,ts,jsx,tsx}",
