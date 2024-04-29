@@ -8,7 +8,7 @@ interface YearData {
 
 interface PopulationDataDto {
   name: string
-  years: YearData
+  years: YearData[]
 }
 
 interface PopulationDto {
@@ -53,7 +53,8 @@ async function getPopulation(): Promise<Population[]> {
     })
   })
 
-  return [...entities, ...regions, ...municipalities].flat()
+  //return [[...entities], [...regions], [...municipalities]].flat()
+  return [{ year: 0, measure: 0, district: "" }]
 }
 
 export async function getPopulationByState(): Promise<ChartData> {
