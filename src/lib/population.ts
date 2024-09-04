@@ -128,3 +128,38 @@ export async function getPopulationPlus65ByState(): Promise<ChartData> {
     data: data,
   }
 }
+
+export async function getRgiByState(): Promise<ChartData> {
+  const response = await database.get<PopulationDto>(config.rgi.fileName)
+
+  const years = Object.keys(response.entities[0].years[0]).map((year) =>
+    parseInt(year)
+  )
+
+  const entities = response.entities.map((entity) => entity.name)
+  const data = years.map((year) => {
+    return {
+      year,
+      CAE:
+        response.entities.find((entity) => entity.name === "CAE")?.years[0][
+          year
+        ] || 0,
+      Bizkaia:
+        response.entities.find((entity) => entity.name === "Bizkaia")?.years[0][
+          year
+        ] || 0,
+      Gipuzkoa:
+        response.entities.find((entity) => entity.name === "Gipuzkoa")
+          ?.years[0][year] || 0,
+      "Araba/Álava":
+        response.entities.find((entity) => entity.name === "Araba/Álava")
+          ?.years[0][year] || 0,
+    }
+  })
+
+  return {
+    index: "year",
+    categories: response.entities.map((entity) => entity.name),
+    data: data,
+  }
+}

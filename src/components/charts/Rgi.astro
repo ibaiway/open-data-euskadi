@@ -1,0 +1,21 @@
+---
+import { getRgiByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import RgiClient from "./RgiClient"
+
+
+const mainData = await getRgiByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <RgiClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

@@ -33,6 +33,15 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
+    title: "Economía",
+    items: [
+      {
+        title: "RGI",
+        url: "/rgi",
+      },
+    ],
+  },
+  {
     title: "Posts",
     items: [
       {

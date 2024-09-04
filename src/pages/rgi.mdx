@@ -1,0 +1,16 @@
+---
+title: "RGI"
+category: "Economía"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import Rgi from "../components/charts/Rgi.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # RGI
+
+Personas beneficiarias de la Renta de Garantia de ingresos (RGI) por mil habitantes .
+
+<Rgi originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-personas-beneficiarias-de-renta-de-garantia-de-ingresos-x2030-habitantes/" />
+
+</DataPageLayout>

@@ -8,5 +8,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/43",
     "fileName": "poblacion_mas_65.json",
     "source": "udalmap"
+  },
+  "rgi": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/63",
+    "fileName": "rgi.json",
+    "source": "udalmap"
   }
 }
