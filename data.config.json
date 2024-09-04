@@ -3,5 +3,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/162",
     "fileName": "poblacion_total.json",
     "source": "udalmap"
+  },
+  "populationPlus65": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/43",
+    "fileName": "poblacion_mas_65.json",
+    "source": "udalmap"
   }
 }

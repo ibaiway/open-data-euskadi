@@ -23,6 +23,11 @@ function dataUpdater() {
       fileName: "poblacion_total.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/43",
+      fileName: "poblacion_mas_65.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {
