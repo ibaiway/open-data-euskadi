@@ -6,15 +6,12 @@ interface NavbarItemProps {
 }
 export default function Navbar(props: NavbarItemProps) {
   const currentPath = props.pathname
-  const currentPage = currentPath ? currentPath.replace("/", "") : ""
-  console.log(currentPage)
+  const currentPage = currentPath ? currentPath.replace(/\//g, "") : ""
 
   const menuItemsWithActive = menuItems.map((item) => {
     const segment = "page"
     const items = item.items.map((child) => {
       const segments = child.url.split("/")
-      console.log("SEGMENTS")
-      console.log(segments)
       const currentSegment = segments.at(-1)
 
       return {
