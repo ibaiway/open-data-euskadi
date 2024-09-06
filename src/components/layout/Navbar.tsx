@@ -13,6 +13,8 @@ export default function Navbar(props: NavbarItemProps) {
     const segment = "page"
     const items = item.items.map((child) => {
       const segments = child.url.split("/")
+      console.log("SEGMENTS")
+      console.log(segments)
       const currentSegment = segments.at(-1)
 
       return {
