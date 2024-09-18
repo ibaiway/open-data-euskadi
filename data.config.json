@@ -13,5 +13,15 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/63",
     "fileName": "rgi.json",
     "source": "udalmap"
+  },
+  "unemploymentMen": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/170",
+    "fileName": "unemployment_men.json",
+    "source": "udalmap"
+  },
+  "unemploymentWomen": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/169",
+    "fileName": "unemployment_women.json",
+    "source": "udalmap"
   }
 }

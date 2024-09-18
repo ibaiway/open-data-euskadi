@@ -1,0 +1,21 @@
+---
+import { getUnemploymentPerSex } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import UnemploymentPerSexClient from "./UnemploymentPerSexClient"
+
+
+const mainData = await getUnemploymentPerSex()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <UnemploymentPerSexClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

@@ -42,6 +42,15 @@ export const menuItems: MenuItem[] = [
     ],
   },
   {
+    title: "Empleo",
+    items: [
+      {
+        title: "Desempleo",
+        url: "/desempleo",
+      },
+    ],
+  },
+  {
     title: "Posts",
     items: [
       {

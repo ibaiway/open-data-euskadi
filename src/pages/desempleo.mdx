@@ -1,0 +1,16 @@
+---
+title: "Desempleo"
+category: "Empleo"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import UnemploymentPerSex from "../components/charts/UnemploymentPerSex.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # Desempleo
+
+Desempleo en la Comunidad Autónoma del País Vasco, visualizado por sexos.
+
+<UnemploymentPerSex originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-demografia/" />
+
+</DataPageLayout>

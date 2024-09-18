@@ -33,6 +33,21 @@ function dataUpdater() {
       fileName: "rgi.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/13",
+      fileName: "unemployment.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/170",
+      fileName: "unemployment_men.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/169",
+      fileName: "unemployment_women.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

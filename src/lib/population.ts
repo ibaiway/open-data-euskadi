@@ -103,3 +103,47 @@ export async function getPopulationPlus65ByState(): Promise<ChartData> {
 export async function getRgiByState(): Promise<ChartData> {
   return parseUdalmapData(config.rgi.fileName)
 }
+
+export async function getUnemploymentPerSex(): Promise<ChartData> {
+  const menUnemploymentRawData = await database.get<PopulationDto>(
+    config.unemploymentMen.fileName
+  )
+  const WomenUnemploymentRawData = await database.get<PopulationDto>(
+    config.unemploymentWomen.fileName
+  )
+
+  const menUnemploymentData =
+    menUnemploymentRawData.entities.find((entity) => entity.name === "CAE")
+      ?.years[0] ?? {}
+  const womenUnemploymentData =
+    WomenUnemploymentRawData.entities.find((entity) => entity.name === "CAE")
+      ?.years[0] ?? {}
+
+  const dataByYear: {
+    [key: string]: { men?: number; women?: number }
+  } = {}
+
+  Object.keys(menUnemploymentData).forEach((year) => {
+    if (!dataByYear[year]) {
+      dataByYear[year] = {} // Initialize as an empty object if not already initialized
+    }
+    dataByYear[year].men = menUnemploymentData[year]
+  })
+  Object.keys(womenUnemploymentData).forEach((year) => {
+    dataByYear[year].women = womenUnemploymentData[year]
+  })
+
+  const data = Object.keys(dataByYear).map((year) => {
+    return {
+      year: parseInt(year),
+      Hombres: dataByYear[year].men || 0,
+      Mujeres: dataByYear[year].women || 0,
+    }
+  })
+
+  return {
+    index: "year",
+    categories: ["Hombres", "Mujeres"],
+    data,
+  }
+}
