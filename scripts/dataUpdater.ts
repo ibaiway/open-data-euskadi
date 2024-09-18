@@ -24,6 +24,11 @@ function dataUpdater() {
       source: "udalmap",
     },
     {
+      url: "https://api.euskadi.eus/udalmap/indicators/74",
+      fileName: "poblacion_extranjera.json",
+      source: "udalmap",
+    },
+    {
       url: "https://api.euskadi.eus/udalmap/indicators/43",
       fileName: "poblacion_mas_65.json",
       source: "udalmap",
@@ -31,11 +36,6 @@ function dataUpdater() {
     {
       url: "https://api.euskadi.eus/udalmap/indicators/63",
       fileName: "rgi.json",
-      source: "udalmap",
-    },
-    {
-      url: "https://api.euskadi.eus/udalmap/indicators/13",
-      fileName: "unemployment.json",
       source: "udalmap",
     },
     {

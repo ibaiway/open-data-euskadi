@@ -1,0 +1,16 @@
+---
+title: "Población"
+category: "Demografía"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import ForeignPopulationTotal from "../components/charts/ForeignPopulationTotal.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # Población extranjera
+
+La evolución demográfica de la poblacion extranjera en Euskadi, visualizado por provincias.
+
+<ForeignPopulationTotal originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-cohesion-social-calidad-de-vida/" />
+
+</DataPageLayout>

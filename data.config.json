@@ -4,6 +4,11 @@
     "fileName": "poblacion_total.json",
     "source": "udalmap"
   },
+  "foreignPopulation": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/74",
+    "fileName": "poblacion_extranjera.json",
+    "source": "udalmap"
+  },
   "populationPlus65": {
     "url": "https://api.euskadi.eus/udalmap/indicators/43",
     "fileName": "poblacion_mas_65.json",

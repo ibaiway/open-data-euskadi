@@ -1,0 +1,21 @@
+---
+import { getForeignPopulationByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import ForeignPopulationTotalClient from "./ForeignPopulationTotalClient"
+
+
+const mainData = await getForeignPopulationByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <ForeignPopulationTotalClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

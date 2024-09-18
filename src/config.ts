@@ -30,6 +30,10 @@ export const menuItems: MenuItem[] = [
         title: "Población",
         url: "/poblacion",
       },
+      {
+        title: "Población extranjera",
+        url: "/poblacion-extranjera",
+      },
     ],
   },
   {
