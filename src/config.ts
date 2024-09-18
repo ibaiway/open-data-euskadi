@@ -54,17 +54,4 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
-  {
-    title: "Posts",
-    items: [
-      {
-        title: "post1",
-        url: "/post1",
-      },
-      {
-        title: "post2",
-        url: "/post2",
-      },
-    ],
-  },
 ]
