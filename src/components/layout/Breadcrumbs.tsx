@@ -1,7 +1,6 @@
 "use client"
 import { GoChevronRight, GoTriangleDown } from "react-icons/go"
 import { menuItems } from "../../config"
-import { redirectDocument } from "react-router-dom"
 
 interface BreadcrumbsProps {
   pathname?: string
@@ -9,17 +8,17 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs(props: BreadcrumbsProps) {
   const currentPath = props.pathname
-  //const currentPage = currentPath ? currentPath.replace("/", "") : ""
+  const currentPage = currentPath ? currentPath.replace(/\//g, "") : ""
 
   const current = menuItems.find((item) =>
-    item.items.find((child) => child.url === currentPath)
+    item.items.find((child) => child.url.split("/").at(-1) === currentPage)
   )
 
   const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const url = event.target.value
 
     if (url) {
-      redirectDocument(url)
+      window.location.href = url
     }
   }
 
@@ -29,7 +28,7 @@ export default function Breadcrumbs(props: BreadcrumbsProps) {
 
   const family = current.title
   const pageName = current.items.find(
-    (child) => child.url === currentPath
+    (child) => child.url.split("/").at(-1) === currentPage
   )?.title
 
   return (
