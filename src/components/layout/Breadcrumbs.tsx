@@ -8,8 +8,6 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs(props: BreadcrumbsProps) {
   const currentPath = props.pathname
-  console.log("CURRENT PATH: ", currentPath)
-  console.log("MODIFIED CURRENT PATH: ", "/" + currentPath?.replace(/\//g, ""))
   const currentPage = currentPath ? currentPath.replace(/\//g, "") : ""
 
   const current = menuItems.find((item) =>
@@ -27,7 +25,6 @@ export default function Breadcrumbs(props: BreadcrumbsProps) {
   if (!current) {
     return null
   }
-  console.log("MENU ITEMS: ", menuItems)
   const family = current.title
   const pageName = current.items.find(
     (child) => child.url.split("/").at(-1) === currentPage
