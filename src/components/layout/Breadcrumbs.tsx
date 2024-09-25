@@ -48,7 +48,7 @@ export default function Breadcrumbs(props: BreadcrumbsProps) {
 
           <select
             className="absolute inset-0 opacity-0"
-            value={currentPath}
+            value={currentPage}
             onChange={handleChange}
           >
             {menuItems.map((item) => (
