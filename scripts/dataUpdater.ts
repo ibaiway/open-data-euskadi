@@ -48,6 +48,11 @@ function dataUpdater() {
       fileName: "unemployment_women.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/96",
+      fileName: "installed_solar_energy.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

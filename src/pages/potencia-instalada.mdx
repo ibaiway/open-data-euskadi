@@ -1,0 +1,17 @@
+---
+title: "Potencia instalada"
+category: "Energía"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import InstalledSolarEnergy from "../components/charts/InstalledSolarEnergy.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # Potencia eléctrica instalada
+  ## Potencia fotovoltaica
+
+La potencia de energia fotovoltaica instalada en Euskadi, visualizado por provincias.
+
+<InstalledSolarEnergy originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
+
+</DataPageLayout>

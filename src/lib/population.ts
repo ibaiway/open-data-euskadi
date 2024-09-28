@@ -108,6 +108,10 @@ export async function getForeignPopulationByState(): Promise<ChartData> {
   return parseUdalmapData(config.foreignPopulation.fileName)
 }
 
+export async function getInstalledSolarEnergyByState(): Promise<ChartData> {
+  return parseUdalmapData(config.installedSolarEnergy.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName

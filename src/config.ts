@@ -54,4 +54,13 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
+  {
+    title: "Energía",
+    items: [
+      {
+        title: "Potencia instalada",
+        url: "/potencia-instalada",
+      },
+    ],
+  },
 ]
