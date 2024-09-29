@@ -53,6 +53,11 @@ function dataUpdater() {
       fileName: "installed_solar_energy.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/97",
+      fileName: "installed_wind_energy.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {
