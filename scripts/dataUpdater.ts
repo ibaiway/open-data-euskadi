@@ -63,6 +63,11 @@ function dataUpdater() {
       fileName: "installed_hydraulic_energy.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/99",
+      fileName: "installed_solar_thermal_energy.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {
