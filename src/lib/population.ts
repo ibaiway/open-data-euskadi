@@ -116,6 +116,10 @@ export async function getInstalledWindEnergyByState(): Promise<ChartData> {
   return parseUdalmapData(config.installedWindEnergy.fileName)
 }
 
+export async function getInstalledHydraulicEnergyByState(): Promise<ChartData> {
+  return parseUdalmapData(config.installedHydraulicEnergy.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName

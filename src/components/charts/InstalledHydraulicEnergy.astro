@@ -1,0 +1,21 @@
+---
+import { getInstalledHydraulicEnergyByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import InstalledHydraulicEnergyClient from "./InstalledHydraulicEnergyClient"
+
+
+const mainData = await getInstalledHydraulicEnergyByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <InstalledHydraulicEnergyClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

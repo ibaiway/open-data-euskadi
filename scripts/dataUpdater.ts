@@ -58,6 +58,11 @@ function dataUpdater() {
       fileName: "installed_wind_energy.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/98",
+      fileName: "installed_hydraulic_energy.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

@@ -38,5 +38,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/97",
     "fileName": "installed_wind_energy.json",
     "source": "udalmap"
+  },
+  "installedHydraulicEnergy": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/98",
+    "fileName": "installed_hydraulic_energy.json",
+    "source": "udalmap"
   }
 }
