@@ -1,0 +1,21 @@
+---
+import { getInstalledSolarThermalEnergyByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import InstalledSolarThermalEnergyClient from "./InstalledSolarThermalEnergyClient"
+
+
+const mainData = await getInstalledSolarThermalEnergyByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <InstalledSolarThermalEnergyClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

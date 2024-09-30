@@ -1,0 +1,21 @@
+---
+import { getInstalledWindEnergyByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import InstalledWindEnergyClient from "./InstalledWindEnergyClient"
+
+
+const mainData = await getInstalledWindEnergyByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <InstalledWindEnergyClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

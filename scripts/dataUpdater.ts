@@ -48,6 +48,26 @@ function dataUpdater() {
       fileName: "unemployment_women.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/96",
+      fileName: "installed_solar_energy.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/97",
+      fileName: "installed_wind_energy.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/98",
+      fileName: "installed_hydraulic_energy.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/99",
+      fileName: "installed_solar_thermal_energy.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

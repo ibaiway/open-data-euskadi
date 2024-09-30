@@ -28,5 +28,25 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/169",
     "fileName": "unemployment_women.json",
     "source": "udalmap"
+  },
+  "installedSolarEnergy": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/96",
+    "fileName": "installed_solar_energy.json",
+    "source": "udalmap"
+  },
+  "installedWindEnergy": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/97",
+    "fileName": "installed_wind_energy.json",
+    "source": "udalmap"
+  },
+  "installedHydraulicEnergy": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/98",
+    "fileName": "installed_hydraulic_energy.json",
+    "source": "udalmap"
+  },
+  "installedSolarThermalEnergy": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/99",
+    "fileName": "installed_solar_thermal_energy.json",
+    "source": "udalmap"
   }
 }
