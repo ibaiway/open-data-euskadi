@@ -5,10 +5,12 @@ import Layout from '../layouts/Layout.astro';
 import { menuItems } from '../config';
 
 //const allPages = await Astro.glob('./*.mdx');
+const title = 'Open Data Euskadi - Gráficos de datos abiertos de Euskadi'
+const description = 'Open Data Euskadi permite visualizar los datos abiertos del Gobierno del País Vasco a traves de graficos interactivos'
 
 ---
 
-<Layout title="Open Data Euskadi">
+<Layout title={title} description={description} >
 	<div class='min-h-[100dvh] flex flex-col justify-center'>
 		<main class="text-slate-50 mb-[2vh]">
 		  <div class='text-center mb-[5vh] pt-4'>
