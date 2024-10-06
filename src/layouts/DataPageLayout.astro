@@ -5,12 +5,12 @@ import Header from '../components/layout/Header.astro';
 import Navbar from '../components/layout/Navbar';
 import Layout from '../layouts/Layout.astro';
 import Prose from './Prose.astro';
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const { pathname } = Astro.url
 
 ---
 
-<Layout title={title}>
+<Layout title={title} description={description}>
     <div class='md:grid md:grid-cols-[280px_1fr] gap-6 min-h-[100vh]'>
         <div class="md:hidden">
           <div class="border-b border-b-slate-800">
