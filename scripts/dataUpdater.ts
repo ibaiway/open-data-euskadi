@@ -68,6 +68,16 @@ function dataUpdater() {
       fileName: "installed_solar_thermal_energy.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/102",
+      fileName: "vehicle_fleet.json",
+      source: "udalmap",
+    },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/158",
+      fileName: "car_fleet.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

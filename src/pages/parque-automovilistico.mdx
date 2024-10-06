@@ -1,0 +1,22 @@
+---
+title: "Parque automovilistico"
+description: "Parque automovilistico en Euskadi"
+category: "Movilidad"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import VehicleFleet from "../components/charts/VehicleFleet.astro"
+import CarFleet from "../components/charts/CarFleet.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category} description={frontmatter.description}>
+  # Parque automovilistico
+
+Parque automovilistico en Euskadi. Datos de la flota de vehículos en Euskadi.
+
+<VehicleFleet originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
+
+## Parque de turismos
+
+<CarFleet originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
+
+</DataPageLayout>
