@@ -63,4 +63,13 @@ export const menuItems: MenuItem[] = [
       },
     ],
   },
+  {
+    title: "Movilidad",
+    items: [
+      {
+        title: "Parque automovilístico",
+        url: "/parque-automovilistico",
+      },
+    ],
+  },
 ]

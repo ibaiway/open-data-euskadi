@@ -124,6 +124,10 @@ export async function getInstalledSolarThermalEnergyByState(): Promise<ChartData
   return parseUdalmapData(config.installedSolarThermalEnergy.fileName)
 }
 
+export async function getVehicleFleetByState(): Promise<ChartData> {
+  return parseUdalmapData(config.vehicleFleet.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName
