@@ -1,0 +1,21 @@
+---
+import { getCarFleetByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import CarFleetClient from "./CarFleetClient"
+
+
+const mainData = await getCarFleetByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <CarFleetClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+
