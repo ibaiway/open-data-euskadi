@@ -1,0 +1,24 @@
+---
+title: "Accidentes de trafico"
+description: "Accidentes de trafico en Euskadi"
+category: "Movilidad"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import TrafficAccidents from "../components/charts/TrafficAccidents.astro"
+import RunOverPedestrians from "../components/charts/RunOverPedestrians.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category} description={frontmatter.description}>
+  # Accidentes de tráfico
+
+Accidentes de trafico registrados en Euskadi.
+
+<TrafficAccidents originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-seguridad-ciudadana/" />
+
+## Atropellos a peatones
+
+Peatones atropellados en accidentes registrados en Euskadi.
+
+<RunOverPedestrians originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-seguridad-ciudadana/" />
+
+</DataPageLayout>

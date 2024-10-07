@@ -1,0 +1,21 @@
+---
+import { getTrafficAccidentsByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import TrafficAccidentsClient from "./TrafficAccidentsClient"
+
+
+const mainData = await getTrafficAccidentsByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <TrafficAccidentsClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+
