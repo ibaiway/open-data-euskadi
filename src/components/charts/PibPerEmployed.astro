@@ -1,0 +1,21 @@
+---
+import { getPibPerEmployedByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import PibPerEmployedClient from "./PibPerEmployedClient"
+
+
+const mainData = await getPibPerEmployedByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <PibPerEmployedClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+
