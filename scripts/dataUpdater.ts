@@ -83,6 +83,11 @@ function dataUpdater() {
       fileName: "traffic_accidents.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/89",
+      fileName: "run_over_pedestrians.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

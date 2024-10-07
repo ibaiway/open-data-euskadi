@@ -1,0 +1,21 @@
+---
+import { getRunOverPedestriansByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import RunOverPedestriansClient from "./RunOverPedestriansClient"
+
+
+const mainData = await getRunOverPedestriansByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <RunOverPedestriansClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

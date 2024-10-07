@@ -63,5 +63,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/90",
     "fileName": "traffic_accidents.json",
     "source": "udalmap"
+  },
+  "runOverPedestrians": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/89",
+    "fileName": "run_over_pedestrians.json",
+    "source": "udalmap"
   }
 }
