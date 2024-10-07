@@ -93,6 +93,11 @@ function dataUpdater() {
       fileName: "pib_per_capita.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/153",
+      fileName: "pib_per_employed.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {

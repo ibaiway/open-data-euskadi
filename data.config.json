@@ -73,5 +73,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/56",
     "fileName": "pib_per_capita.json",
     "source": "udalmap"
+  },
+  "pibPerEmployed": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/153",
+    "fileName": "pib_per_employed.json",
+    "source": "udalmap"
   }
 }

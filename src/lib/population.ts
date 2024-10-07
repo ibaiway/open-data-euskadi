@@ -144,6 +144,10 @@ export async function getPibPerCapitaByState(): Promise<ChartData> {
   return parseUdalmapData(config.pibPerCapita.fileName)
 }
 
+export async function getPibPerEmployedByState(): Promise<ChartData> {
+  return parseUdalmapData(config.pibPerEmployed.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName

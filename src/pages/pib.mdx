@@ -6,12 +6,17 @@ category: "Economía"
 
 import DataPageLayout from "../layouts/DataPageLayout.astro"
 import PibPerCapita from "../components/charts/PibPerCapita.astro"
+import PibPerEmployed from "../components/charts/PibPerEmployed.astro"
 
 <DataPageLayout title={frontmatter.title} category={frontmatter.category} description={frontmatter.description}>
-  # PIB
+  # PIB per capita
 
 Producto Interior Bruto (PIB) per capita en Euskadi.
 
 <PibPerCapita originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-economia-competitividad/" />
+
+## PIB por persona ocupada
+
+<PibPerEmployed originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-economia-competitividad/" />
 
 </DataPageLayout>
