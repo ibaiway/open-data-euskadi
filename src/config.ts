@@ -70,6 +70,10 @@ export const menuItems: MenuItem[] = [
         title: "Parque automovilístico",
         url: "/parque-automovilistico",
       },
+      {
+        title: "Accidentes de tráfico",
+        url: "/accidentes-de-trafico",
+      },
     ],
   },
 ]

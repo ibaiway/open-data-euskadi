@@ -132,6 +132,10 @@ export async function getCarFleetByState(): Promise<ChartData> {
   return parseUdalmapData(config.carFleet.fileName)
 }
 
+export async function getTrafficAccidentsByState(): Promise<ChartData> {
+  return parseUdalmapData(config.trafficAccidents.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName

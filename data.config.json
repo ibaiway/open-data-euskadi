@@ -58,5 +58,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/158",
     "fileName": "car_fleet.json",
     "source": "udalmap"
+  },
+  "trafficAccidents": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/90",
+    "fileName": "traffic_accidents.json",
+    "source": "udalmap"
   }
 }

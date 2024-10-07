@@ -78,6 +78,11 @@ function dataUpdater() {
       fileName: "car_fleet.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/90",
+      fileName: "traffic_accidents.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {
