@@ -68,5 +68,10 @@
     "url": "https://api.euskadi.eus/udalmap/indicators/89",
     "fileName": "run_over_pedestrians.json",
     "source": "udalmap"
+  },
+  "pibPerCapita": {
+    "url": "https://api.euskadi.eus/udalmap/indicators/56",
+    "fileName": "pib_per_capita.json",
+    "source": "udalmap"
   }
 }

@@ -39,6 +39,7 @@ export const menuItems: MenuItem[] = [
   {
     title: "Economía",
     items: [
+      { title: "PIB", url: "/pib" },
       {
         title: "RGI",
         url: "/rgi",
