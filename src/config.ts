@@ -62,6 +62,10 @@ export const menuItems: MenuItem[] = [
         title: "Potencia instalada",
         url: "/potencia-instalada",
       },
+      {
+        title: "Consumo eléctrico",
+        url: "/consumo-electrico",
+      },
     ],
   },
   {

@@ -1,0 +1,21 @@
+---
+import { getEnergyConsumptionByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import EnergyConsumptionClient from "./EnergyConsumptionClient"
+
+
+const mainData = await getEnergyConsumptionByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <EnergyConsumptionClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

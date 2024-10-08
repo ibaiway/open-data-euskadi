@@ -1,0 +1,17 @@
+---
+title: "Consumo eléctrico"
+description: "Consumo eléctrico en Euskadi"
+category: "Energía"
+---
+
+import DataPageLayout from "../layouts/DataPageLayout.astro"
+import EnergyConsumption from "../components/charts/EnergyConsumption.astro"
+
+<DataPageLayout title={frontmatter.title} category={frontmatter.category}>
+  # Consumo eléctrico
+
+Consumo eléctrico anual en Euskadi.
+
+<EnergyConsumption originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
+
+</DataPageLayout>
