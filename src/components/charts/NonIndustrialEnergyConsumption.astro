@@ -1,0 +1,21 @@
+---
+import { getNonIndustrialEnergyConsumptionByState } from "../../lib/population";
+import CardExpanded from "../ui/CardExpanded"
+import NonIndustrialEnergyConsumptionClient from "./NonIndustrialEnergyConsumptionClient"
+
+
+const mainData = await getNonIndustrialEnergyConsumptionByState()
+
+const { index, data, categories } = mainData
+const { originUrl } = Astro.props;
+
+---
+
+
+
+
+    <CardExpanded originUrl={originUrl}>
+      <NonIndustrialEnergyConsumptionClient client:load index={index} data={data} categories={categories} />
+    </CardExpanded>
+  
+

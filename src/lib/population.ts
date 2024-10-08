@@ -152,6 +152,10 @@ export async function getEnergyConsumptionByState(): Promise<ChartData> {
   return parseUdalmapData(config.energyConsumption.fileName)
 }
 
+export async function getNonIndustrialEnergyConsumptionByState(): Promise<ChartData> {
+  return parseUdalmapData(config.nonIndustrialEnergyConsumption.fileName)
+}
+
 export async function getUnemploymentPerSex(): Promise<ChartData> {
   const menUnemploymentRawData = await database.get<PopulationDto>(
     config.unemploymentMen.fileName

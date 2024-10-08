@@ -6,6 +6,7 @@ category: "Energía"
 
 import DataPageLayout from "../layouts/DataPageLayout.astro"
 import EnergyConsumption from "../components/charts/EnergyConsumption.astro"
+import NonIndustrialEnergyConsumption from "../components/charts/NonIndustrialEnergyConsumption.astro"
 
 <DataPageLayout title={frontmatter.title} category={frontmatter.category}>
   # Consumo eléctrico
@@ -13,5 +14,11 @@ import EnergyConsumption from "../components/charts/EnergyConsumption.astro"
 Consumo eléctrico anual en Euskadi.
 
 <EnergyConsumption originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
+
+## Consumo eléctrico no industrial
+
+Consumo eléctrico anual no industrial en Euskadi.
+
+<NonIndustrialEnergyConsumption originUrl="https://opendata.euskadi.eus/catalogo/-/indicadores-municipales-de-sostenibilidad-medioambiente-y-movilidad/" />
 
 </DataPageLayout>

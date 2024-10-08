@@ -103,6 +103,11 @@ function dataUpdater() {
       fileName: "energy_consumption.json",
       source: "udalmap",
     },
+    {
+      url: "https://api.euskadi.eus/udalmap/indicators/160",
+      fileName: "non_industrial_energy_consumption.json",
+      source: "udalmap",
+    },
   ]
 
   dataSources.forEach((dataSource) => {
